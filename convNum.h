@@ -1,14 +1,19 @@
 /*******************************************************************************
- *  Original design from The linux programming interface by Michael Kerrisk
+ * Level 1 cache similator project
+ * ECE 4/585
+ * Mark Faust
+ * 12/3/2017
+ * Portland State University, Portland OR
+ * written and property of : James Ross
  *
- *  filename: convNum.h
- *  Turns a string of characters into a their numerical equivilance using
- *  strtoul family and error checking the results.
+ *   filename: convNum.h
+    Turns a string of characters into a their numerical equivilance using
+    strtoul family and error checking the results.
  ******************************************************************************/
 
 
 
-#ifndef _CONV_NUM_H
+#ifndef _CON_NUM_H
 #define _CONV_NUM_H
                     /* definitions */
 #define CN_NONEG    0x1      /* Value must be >= 0 */
@@ -47,4 +52,7 @@ uint32_t convU32_t(const char *arg, int32_t flags, const char *varName);
 
 /* turn arg into a uint64_t based on flags. name used in error message */
 uint64_t convU64_t(const char *arg, int32_t flags, const char *varName);
+
+/* turn arg into double bassed on flags. name used in error message */
+double conv_dbl(const char *arg, int32_t flags, const char *var_name);
 #endif
